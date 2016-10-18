@@ -1,0 +1,22 @@
+<% if !@user_id.nil? %>
+  <% if !@password.nil? %>
+    <h1>Password Checker</h1>
+  <% end %>
+<% end %>
+<form action="check_password" method="get">
+  <label for="user_id"> User ID</label>
+  <input type="text" name="user_id" id="user_id"/>
+    <input type="submit" value="Submit ID"/>
+  <hr/>
+  <label for="password_id"> Password</label>
+  <input type="text" name="password" id="password_id"/>
+    <input type="submit" value="Submit Password"/>
+  <hr/>
+
+</form>
+
+Results:
+<br>
+        <%= @valid_password %>
+        <br>
+        <%= @valid_user_id %>
